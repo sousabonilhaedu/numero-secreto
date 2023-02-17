@@ -1,10 +1,19 @@
 function validacao(chute){
     const numero = +chute;
 
-    if(Number.isNaN(numero)){
+    if(numeroForInvalido(numero)){
+        
+        if(chute.toUpperCase() === "GAME OVER"){
+            document.body.innerHTML = `
+            <h1>Fim de jogo</h1>
+            <h3>Pressione o botão "jogar novamente" para tentar mais uma vez</h3>
+            <a href="#" class="botao" id="jogar-dnv">Jogar novamente</a>
+            `
+            document.body.style.backgroundColor = "black"
+        }else{
         elementoChute.innerHTML += `
             <div>Você tem que dizer um número! abestado</div>
-        `
+        `}
         return
     }
     
@@ -38,3 +47,7 @@ document.body.addEventListener('click', function(event){
         window.location.reload();
     }
 })
+
+function numeroForInvalido(numero) {
+    return Number.isNaN(numero);
+}
