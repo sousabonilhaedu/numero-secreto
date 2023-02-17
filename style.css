@@ -1,0 +1,94 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+:root{
+    --font-principal:'Patrick Hand', sans-serif;
+    --cor-de-fundo:linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(96, 158, 162) 0%, rgba(132, 210, 197) 100%);
+    --cor-principal: #F0EEED;
+    
+}
+
+body{
+    min-height: 100vh;
+   background-image: var(--cor-de-fundo);
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center center;
+   color: var(--cor-principal);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   margin: 0;
+   font-family: var(--font-principal);
+    
+}
+.acertou{
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(0,179,40,1) 0%, rgba(6,233,0,1) 100%);;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+}
+
+h1{
+    font-size: 5em;
+}
+
+h3{
+    font-size: 3em;
+    margin: 1em 0;
+}
+
+.mensagem {
+    font-size: 1.5em;
+}
+
+.box{
+    border: solid 2px var(--cor-principal);
+    display: inline-block;
+    font-size: 3em;
+    padding: 0.5em;
+    margin: 20px;
+    border-radius: 15px;
+}
+
+.hidden{
+    display: none;
+}
+
+.botao{
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(96,158,162,1) 0%, rgba(65,242,254,1) 100%);
+    padding: 2em;
+    border-radius: 15px;
+    color: #fff;
+    text-decoration: none;
+    text-transform:uppercase;
+    margin-top: 3em;
+    box-shadow: 12px 11px 18px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 12px 11px 18px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 12px 11px 18px 0px rgba(0,0,0,0.75);
+    transition: 0.3s;
+}
+
+.botao:hover{
+    background: #fff;
+    color: rgba(96,158,162,1);
+}
+
+.botao:active{
+    box-shadow: 15px 9px 21px -8px rgba(64,64,64,0.63) inset;
+    -webkit-box-shadow: 15px 9px 21px -8px rgba(64,64,64,0.63) inset;
+    -moz-box-shadow: 15px 9px 21px -8px rgba(64,64,64,0.63) inset;
+}
+
+@media screen and (max-width: 479px){
+    h1{
+        font-size: 3em;
+    }
+    h3{
+        font-size: 2em;
+    }
+
+}
